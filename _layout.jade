@@ -4,6 +4,7 @@ html
     link(rel="stylesheet" href="/main.css")
     link(rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css")
     link(rel="stylesheet" href="/bootflat/scss/bootflat.css")
+    link(rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css")
   
   body
     .navbar.navbar-default
@@ -19,15 +20,16 @@ html
     
     != yield
 
-    //Bootstrap
+    // Bootstrap
     script(src="https://code.jquery.com/jquery-1.11.0.min.js")
     script(src="https://netdna.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js")
 
-    //Bootflat's JS files
+    // Bootflat's JS files
     script(src="https://bootflat.github.io/bootflat/js/icheck.min.js")
     script(src="https://bootflat.github.io/bootflat/js/jquery.fs.selecter.min.js")
     script(src="https://bootflat.github.io/bootflat/js/jquery.fs.stepper.min.js")
     
+    // Detect active section of navbar
     script.
       $(function(){
         var url = window.location.href;
