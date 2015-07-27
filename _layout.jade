@@ -2,5 +2,38 @@ doctype
 html
   head
     link(rel="stylesheet" href="/main.css")
+    link(rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css")
+    link(rel="stylesheet" href="/bootflat/scss/bootflat.css")
+  
   body
+    .navbar.navbar-default
+      .container-fluid
+        .navbar-header
+          .navbar-brand Stuff
+        .collapse.navbar-collapse
+          .nav.navbar-nav
+            li
+              a(href='/') Home
+            li
+              a(href='/cards') Cards
+    
     != yield
+
+    //Bootstrap
+    script(src="https://code.jquery.com/jquery-1.11.0.min.js")
+    script(src="https://netdna.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js")
+
+    //Bootflat's JS files
+    script(src="https://bootflat.github.io/bootflat/js/icheck.min.js")
+    script(src="https://bootflat.github.io/bootflat/js/jquery.fs.selecter.min.js")
+    script(src="https://bootflat.github.io/bootflat/js/jquery.fs.stepper.min.js")
+    
+    script.
+      $(function(){
+        var url = window.location.href;
+        $(".navbar-nav li a").each(function() {
+          if (url == (this.href)) {
+            $(this).closest("li").addClass("active");
+          }
+        });
+      });
