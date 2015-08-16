@@ -2,36 +2,41 @@ doctype
 html
   head
     link(rel="stylesheet" href="/main.css")
-    link(rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css")
+    link(rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css")
     link(rel="stylesheet" href="/bootflat/scss/bootflat.css")
     link(rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css")
+
+    block morehead
   
   body
-    .navbar.navbar-default
+    .navbar.navbar-default.navbar-fixed-top
       .container-fluid
         .navbar-header
-          .navbar-brand Stuff
+          .navbar-brand Hi :)
         .collapse.navbar-collapse
           .nav.navbar-nav
             li
               a(href='/') Home
             li
-              a(href='/cards') Cards
-            li
               a(href='/about') About
             li
               a(href='/resume') Resume
+            li
+              a(href='/cards') Cards
     
-    != yield
+    block content
 
     // Bootstrap
-    script(src="https://code.jquery.com/jquery-1.11.0.min.js")
-    script(src="https://netdna.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js")
+    script(src="//code.jquery.com/jquery-1.11.0.min.js")
+    script(src="//netdna.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js")
 
     // Bootflat's JS files
-    script(src="https://bootflat.github.io/bootflat/js/icheck.min.js")
-    script(src="https://bootflat.github.io/bootflat/js/jquery.fs.selecter.min.js")
-    script(src="https://bootflat.github.io/bootflat/js/jquery.fs.stepper.min.js")
+    script(src="//bootflat.github.io/bootflat/js/icheck.min.js")
+    script(src="//bootflat.github.io/bootflat/js/jquery.fs.selecter.min.js")
+    script(src="//bootflat.github.io/bootflat/js/jquery.fs.stepper.min.js")
+
+    // Salvattore for css-driven pinterest-like layout
+    script(src="//cdnjs.cloudflare.com/ajax/libs/salvattore/1.0.7/salvattore.min.js")
     
     // Detect active section of navbar
     script.
@@ -43,3 +48,5 @@ html
           }
         });
       });
+
+    block morescript

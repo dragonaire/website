@@ -1,28 +1,28 @@
-h1 Cards
-h3 I like to make cards for friends.
-.row
-  .col-sm-6.col-md-3
+extends layout
+block morehead
+  link(rel="stylesheet" href="/cards.css")
+block content
+  h1 Cards
+  h3 I like to make cards for friends.
+  #grid(data-columns='')
     .thumbnail
       a(href="images/cards_dino.jpg")
         img(src="images/cards_dino.jpg")
       .caption
       h4 For Joy and Alex
       p Matching dinosaur birthday cards with cross-referencing puzzles inside for a clever couple
-  .col-sm-6.col-md-3
     .thumbnail
       a(href="images/cards_shruthi.jpg")
         img(src="images/cards_shruthi.jpg")
       .caption
       h4 For Shruthi
       p A chibi version of a lively friend with space for birthday messages from friends
-  .col-sm-6.col-md-3
     .thumbnail
       a(href="images/cards_kchen.jpg")
         img(src="images/cards_kchen.jpg")
       .caption
       h4 For KChen
       p Laminated monochrome picture of a photograph and memories
-  .col-sm-6.col-md-3
     .thumbnail
       a(href="images/cards_succulents.jpg")
         img(src="images/cards_succulents.jpg")
