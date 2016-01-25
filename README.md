@@ -1,4 +1,7 @@
-# website
+# Run locally
+`harp server` (default port 9000)
+
+# Technology
 - hosting -> pancakeio
 - webserver -> harpjs
 - styling -> bootflat (on bootstrap)
